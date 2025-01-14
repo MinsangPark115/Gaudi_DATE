@@ -1,0 +1,53 @@
+1736223250.9773748
+/usr/local/lib/python3.10/dist-packages/torch/distributed/distributed_c10d.py:366: UserWarning: torch.distributed.reduce_op is deprecated, please use torch.distributed.ReduceOp instead
+  warnings.warn(
+/usr/local/lib/python3.10/dist-packages/huggingface_hub/file_download.py:1150: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+============================= HABANA PT BRIDGE CONFIGURATION =========================== 
+ PT_HPU_LAZY_MODE = 0
+ PT_RECIPE_CACHE_PATH = 
+ PT_CACHE_FOLDER_DELETE = 0
+ PT_HPU_RECIPE_CACHE_CONFIG = 
+ PT_HPU_MAX_COMPOUND_OP_SIZE = 9223372036854775807
+ PT_HPU_LAZY_ACC_PAR_MODE = 1
+ PT_HPU_ENABLE_REFINE_DYNAMIC_SHAPES = 0
+---------------------------: System Configuration :---------------------------
+Num CPU Cores : 160
+CPU RAM       : 2113407616 KB
+------------------------------------------------------------------------------
+Args:
+	adj: 0
+	analysis: False
+	analysis_dir: analysis
+	analysis_idx: 0
+	analysis_target_prompt: A bearded man in a wetsuit holding a surfboard. 
+	bs: 4
+	clip_type: clip-vit-large-patch14
+	generate_seed: 6
+	init_org: False
+	lr_upt_prompt: 0.5
+	max_cnt: 5000
+	max_update: 99999999999
+	name: TEST_3
+	num_upt_prompt: 1
+	restart: False
+	s_noise: 1.0
+	save_path: gen_images
+	save_pred: False
+	scheduler: DDIM
+	second: False
+	sigma: False
+	skip_freq: 10
+	skip_itrs: 
+	steps: 50
+	text_path: subset.csv
+	w: 8.0
+	weight_prior: 591.36
+Loading pipeline class <class 'diffusers.pipelines.stable_diffusion.pipeline_stable_diffusion_inter.StableDiffusionInterPipeline'> from /root/.cache/huggingface/hub/models--runwayml--stable-diffusion-v1-5/snapshots/451f4fe16113bff5a5d2269ed5ad43b0592e9a14
+config_dict {'_class_name': 'StableDiffusionPipeline', '_diffusers_version': '0.6.0', 'feature_extractor': ['transformers', 'CLIPImageProcessor'], 'safety_checker': ['stable_diffusion', 'StableDiffusionSafetyChecker'], 'scheduler': ['diffusers', 'PNDMScheduler'], 'text_encoder': ['transformers', 'CLIPTextModel'], 'tokenizer': ['transformers', 'CLIPTokenizer'], 'unet': ['diffusers', 'UNet2DConditionModel'], 'vae': ['diffusers', 'AutoencoderKL']}
+default scheduler config:
+FrozenDict([('num_train_timesteps', 1000), ('beta_start', 0.00085), ('beta_end', 0.012), ('beta_schedule', 'scaled_linear'), ('trained_betas', None), ('skip_prk_steps', True), ('set_alpha_to_one', False), ('prediction_type', 'epsilon'), ('steps_offset', 1), ('_class_name', 'PNDMScheduler'), ('_diffusers_version', '0.6.0'), ('clip_sample', False)])
+save images to gen_images/scheduler_DDIM_steps_50_restart_False_w_8.0_second_False_seed_6_sigma_False_name_TEST_3
+  0%|          | 0/1250 [00:00<?, ?batch/s]/usr/local/lib/python3.10/dist-packages/torch/autograd/graph.py:744: UserWarning: aten::dropout: an autograd kernel was not registered to the Autograd key(s) but we are trying to backprop through it. This may lead to silently incorrect behavior. This behavior is deprecated and will be removed in a future version of PyTorch. If your operator is differentiable, please ensure you have registered an autograd kernel to the correct Autograd key (e.g. DispatchKey::Autograd, DispatchKey::CompositeImplicitAutograd). If your operator is not differentiable, or to squash this warning and use the previous behavior, please register torch::CppFunction::makeFallthrough() to DispatchKey::Autograd. (Triggered internally at /npu-stack/pytorch-fork/torch/csrc/autograd/autograd_not_implemented_fallback.cpp:63.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+  0%|          | 1/1250 [00:30<10:44:28, 30.96s/batch]  0%|          | 2/1250 [01:01<10:39:32, 30.75s/batch]  0%|          | 3/1250 [01:31<10:32:49, 30.45s/batch]  0%|          | 4/1250 [02:01<10:28:05, 30.25s/batch]  0%|          | 5/1250 [02:31<10:25:52, 30.16s/batch]  0%|          | 6/1250 [03:01<10:24:46, 30.13s/batch]  1%|          | 7/1250 [03:31<10:24:42, 30.15s/batch]  1%|          | 8/1250 [04:01<10:23:49, 30.14s/batch]  1%|          | 9/1250 [04:31<10:22:28, 30.10s/batch]  1%|          | 10/1250 [05:01<10:21:12, 30.06s/batch]  1%|          | 11/1250 [05:31<10:20:02, 30.03s/batch]  1%|          | 12/1250 [06:01<10:19:19, 30.02s/batch]  1%|          | 13/1250 [06:31<10:19:12, 30.03s/batch]  1%|          | 14/1250 [07:01<10:18:13, 30.01s/batch]  1%|          | 15/1250 [07:31<10:17:22, 29.99s/batch]  1%|▏         | 16/1250 [08:01<10:17:03, 30.00s/batch]  1%|▏         | 17/1250 [08:31<10:16:43, 30.01s/batch]
